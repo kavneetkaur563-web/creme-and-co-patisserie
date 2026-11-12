@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Crème & Co. Pâtisserie</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">Crème & Co.<span>PÂTISSERIE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="shop.html">SHOP</a></li>
+      <li><a href="collections.html">COLLECTIONS</a></li>
+      <li><a href="story.html">OUR STORY</a></li>
+      <li><a href="journal.html">JOURNAL</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="shop.html">🔍</a>
+      <a href="login.html">👤</a>
+      <a href="cart.html">🛍️<span class="cart-badge">2</span></a>
+    </div>
+  </nav>
+
+  <header class="cart-banner">
+    <p class="hero-eyebrow">— FINAL STEP —</p>
+    <h1>Sweet Checkout</h1>
+    <div class="heart-divider" style="justify-content: center;">♡</div>
+  </header>
+
+  <main class="cart-layout">
+    <!-- LEFT DELIVERY & PAYMENT FORM -->
+    <div class="contact-form-card">
+      <h2 style="font-family: var(--font-serif); font-weight: 500; margin-bottom: 1.5rem;">Delivery Details</h2>
+
+      <form id="checkout-form" onsubmit="completeOrder(event)">
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>FULL NAME</label>
+            <input type="text" placeholder="Kavneet Kaur" required>
+          </div>
+          <div class="form-group">
+            <label>PHONE NUMBER</label>
+            <input type="tel" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>DELIVERY ADDRESS</label>
+          <input type="text" placeholder="Street address, apartment, landmark" required>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>CITY</label>
+            <input type="text" placeholder="Jaipur" required>
+          </div>
+          <div class="form-group">
+            <label>PIN CODE</label>
+            <input type="text" placeholder="302001" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>GIFT WRAPPING & NOTE (OPTIONAL)</label>
+          <textarea rows="2" placeholder="Add a personalized message card..."></textarea>
+        </div>
+
+        <h3 style="font-family: var(--font-serif); font-weight: 500; margin: 1.5rem 0 1rem;">Payment Method</h3>
+        <div class="filter-group">
+          <label><input type="radio" name="payment" checked> Credit / Debit Card</label>
+          <label><input type="radio" name="payment"> UPI / Net Banking</label>
+          <label><input type="radio" name="payment"> Cash on Delivery</label>
+        </div>
+
+        <button type="submit" class="btn-primary">PLACE YOUR SWEET ORDER ♡</button>
+      </form>
+
+      <!-- HIDDEN CONFIRMATION MESSAGE -->
+      <div id="order-confirmation" style="display: none; text-align: center; padding: 2rem 0;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎀</div>
+        <h2 style="font-family: var(--font-serif); font-size: 2rem; color: var(--berry-primary);">Order Confirmed!</h2>
+        <p style="color: var(--text-cocoa); margin: 0.8rem 0 1.5rem;">
+          Thank you for your order. Our pastry chefs are preparing your handcrafted treats with love.
+        </p>
+        <a href="index.html" class="btn-outline">RETURN TO HOME →</a>
+      </div>
+    </div>
+
+    <!-- RIGHT SUMMARY -->
+    <div class="summary-box">
+      <h2 style="font-family: var(--font-serif); font-weight: 500; margin-bottom: 1rem;">Order Summary</h2>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <strong id="summary-subtotal">$15.50</strong>
+      </div>
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span id="summary-shipping">Free</span>
+      </div>
+      <div class="summary-total">
+        <span>Total</span>
+        <strong id="summary-total">$15.50</strong>
+      </div>
+      <p style="font-size: 0.78rem; color: var(--text-cocoa); text-align: center;">
+        🔒 100% Freshness & Safe Delivery Guaranteed
+      </p>
+    </div>
+  </main>
+
+  <section class="trust-banner">
+    <div class="trust-item"><h3>10+</h3><p class="label">YEARS OF PASSION</p><p class="sub">Crafting happiness since 2014.</p></div>
+    <div class="trust-item"><h3>250K+</h3><p class="label">HAPPY CUSTOMERS</p><p class="sub">Loved by thousands around the world.</p></div>
+    <div class="trust-item"><h3>98%</h3><p class="label">SATISFACTION RATE</p><p class="sub">Quality & taste our customers trust.</p></div>
+    <div class="trust-item"><h3>100%</h3><p class="label">MADE WITH LOVE</p><p class="sub">Every pastry is crafted with heart & care.</p></div>
+  </section>
+
+  <footer class="footer-guarantees">
+    <div class="guarantee-box"><h4>FAST DELIVERY</h4><p>Freshly packed & delivered to your doorstep.</p></div>
+    <div class="guarantee-box"><h4>SECURE PAYMENT</h4><p>Safe, encrypted & trusted checkout.</p></div>
+    <div class="guarantee-box"><h4>CUSTOMER SUPPORT</h4><p>We're here to make your experience sweet.</p></div>
+    <div class="guarantee-box"><h4>EASY RETURNS</h4><p>Hassle-free returns within 7 days.</p></div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cart = getCart();
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      updateSummary(subtotal);
+    });
+
+    function completeOrder(event) {
+      event.preventDefault();
+      localStorage.removeItem("creme_cart");
+      updateCartBadge();
+      document.getElementById("checkout-form").style.display = "none";
+      document.getElementById("order-confirmation").style.display = "block";
+    }
+  </script>
+</body>
+</html>

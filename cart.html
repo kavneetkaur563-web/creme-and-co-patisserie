@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart — Crème & Co. Pâtisserie</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">Crème & Co.<span>PÂTISSERIE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="shop.html">SHOP</a></li>
+      <li><a href="collections.html">COLLECTIONS</a></li>
+      <li><a href="story.html">OUR STORY</a></li>
+      <li><a href="journal.html">JOURNAL</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="shop.html">🔍</a>
+      <a href="login.html">👤</a>
+      <a href="cart.html">🛍️<span class="cart-badge">2</span></a>
+    </div>
+  </nav>
+
+  <header class="cart-banner">
+    <p class="hero-eyebrow">— YOUR CART —</p>
+    <h1>A Sweet Little List</h1>
+    <div class="heart-divider" style="justify-content: center;">♡</div>
+  </header>
+
+  <main class="cart-layout">
+    <div>
+      <div class="cart-box">
+        <div class="cart-header">
+          <span>Product</span>
+          <span>Price</span>
+          <span>Quantity</span>
+          <span>Total</span>
+          <span></span>
+        </div>
+
+        <div id="cart-items-container"></div>
+      </div>
+
+      <div style="margin-top: 1.2rem;">
+        <a href="shop.html" style="font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-espresso); text-decoration: none;">← CONTINUE SHOPPING</a>
+      </div>
+
+      <div class="note-accordion">
+        <span>🎁 &nbsp; Add a note to your order</span>
+        <span>⌄</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="summary-box">
+        <h2 style="font-family: var(--font-serif); font-weight: 500; margin-bottom: 1rem;">Order Summary</h2>
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <strong id="summary-subtotal">$15.50</strong>
+        </div>
+        <div class="summary-row">
+          <span>Shipping<br><small style="font-size: 0.72rem;">(on orders over $30)</small></span>
+          <span id="summary-shipping">Free</span>
+        </div>
+        <div class="summary-total">
+          <span>Total</span>
+          <strong id="summary-total">$15.50</strong>
+        </div>
+        <a href="checkout.html" class="btn-primary" style="text-align: center; text-decoration: none;">PROCEED TO CHECKOUT →</a>
+        <p style="text-align: center; font-size: 0.75rem; color: var(--text-cocoa); margin-top: 0.9rem;">🔒 Secure & Encrypted Checkout</p>
+      </div>
+
+      <p style="text-align: center; font-family: var(--font-serif); font-style: italic; color: var(--text-cocoa); margin-top: 1.2rem;">
+        ♡<br>Sweet moments, delivered with love ♡
+      </p>
+    </div>
+  </main>
+
+  <section class="trust-banner">
+    <div class="trust-item"><h3>10+</h3><p class="label">YEARS OF PASSION</p><p class="sub">Crafting happiness since 2014.</p></div>
+    <div class="trust-item"><h3>250K+</h3><p class="label">HAPPY CUSTOMERS</p><p class="sub">Loved by thousands around the world.</p></div>
+    <div class="trust-item"><h3>98%</h3><p class="label">SATISFACTION RATE</p><p class="sub">Quality & taste our customers trust.</p></div>
+    <div class="trust-item"><h3>100%</h3><p class="label">MADE WITH LOVE</p><p class="sub">Every pastry is crafted with heart & care.</p></div>
+  </section>
+
+  <footer class="footer-guarantees">
+    <div class="guarantee-box"><h4>FAST DELIVERY</h4><p>Freshly packed & delivered to your doorstep.</p></div>
+    <div class="guarantee-box"><h4>SECURE PAYMENT</h4><p>Safe, encrypted & trusted checkout.</p></div>
+    <div class="guarantee-box"><h4>CUSTOMER SUPPORT</h4><p>We're here to make your experience sweet.</p></div>
+    <div class="guarantee-box"><h4>EASY RETURNS</h4><p>Hassle-free returns within 7 days.</p></div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
