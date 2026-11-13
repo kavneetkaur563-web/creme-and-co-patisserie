@@ -1,4 +1,166 @@
 /* --- HOME PAGE EXACT LAYOUT --- */
+@import url('https://googleapis.com');
+
+:root {
+  --bg-cream: #FAF6F3;
+  --bg-blush: #F7E7E6;
+  --berry-primary: #A85161;
+  --berry-dark: #8C3E4D;
+  --text-espresso: #3B2322;
+  --text-cocoa: #6E5554;
+  --border-soft: #EAD8D6;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-espresso);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+/* --- NAVBAR & PINK LOGO --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 6%;
+  background-color: var(--bg-cream);
+  border-bottom: 1px solid var(--border-soft);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--berry-primary);
+  text-decoration: none;
+  line-height: 1.1;
+}
+
+.logo span {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  color: var(--text-cocoa);
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* --- HORIZONTAL NAVIGATION LINKS --- */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-espresso);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--berry-primary);
+  border-bottom: 1.5px solid var(--berry-primary);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+}
+
+.nav-icons a {
+  text-decoration: none;
+  color: var(--text-espresso);
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: var(--berry-primary);
+  color: #FFFFFF;
+  font-size: 0.62rem;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+/* --- HEART DIVIDER LINE --- */
+.heart-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1.2rem 0;
+  color: var(--berry-primary);
+  font-size: 0.85rem;
+}
+
+.heart-divider::before,
+.heart-divider::after {
+  content: "";
+  width: 32px;
+  height: 1.5px;
+  background-color: var(--berry-primary);
+}
+
+/* --- BOXED BUTTONS --- */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--berry-primary);
+  color: #FFFFFF;
+  padding: 0.9rem 1.8rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--berry-primary);
+  cursor: pointer;
+}
+
+.btn-outline {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--text-espresso);
+  padding: 0.9rem 1.8rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--text-cocoa);
+}
+
+
+
 .hero-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
