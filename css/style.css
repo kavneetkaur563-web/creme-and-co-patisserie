@@ -1137,3 +1137,30 @@ body {
   mix-blend-mode: multiply;
   flex-shrink: 0;
 }
+.checkout-right-art {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 150px;
+  max-width: 150px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.checkout-right-art img {
+  width: 150px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 768px) {
+  .checkout-right-art {
+    position: static;
+    transform: none;
+    width: 120px;
+    margin-top: 16px;
+  }
+}
