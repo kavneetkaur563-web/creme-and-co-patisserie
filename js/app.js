@@ -7,20 +7,20 @@ const defaultCart = [
     desc: "Light mousse, raspberry compote, almond sponge.",
     price: 8.50,
     qty: 1,
-    img: "https://unsplash.com"
+    img: "raspberrycloud.jpeg"
   },
   {
     name: "Rose Macaron",
     desc: "Rose cream, lychee, raspberry filling.",
     price: 7.00,
     qty: 1,
-    img: "https://unsplash.com"
+    img: "rosemacron.jpeg"
   }
 ];
 
 function getCart() {
   const saved = localStorage.getItem("creme_cart");
-  if (!saved) {
+  if (!saved || saved.includes("unsplash.com")) {
     localStorage.setItem("creme_cart", JSON.stringify(defaultCart));
     return defaultCart;
   }

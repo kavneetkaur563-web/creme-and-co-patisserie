@@ -457,8 +457,6 @@ body {
 
 
 
-
-
 /* --- SHOP & COLLECTIONS PAGES (DAYS 5 & 6) --- */
 .page-hero {
   display: grid;
@@ -879,4 +877,263 @@ body {
   font-family: var(--font-sans);
   font-size: 0.9rem;
   color: var(--text-espresso);
+}
+
+.shop-cta-banner {
+  background-color: #f3e4e6;
+  padding: 60px 40px;
+  margin-top: 60px;
+}
+
+.shop-cta-container {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.shop-cta-text {
+  flex: 1;
+  text-align: left;
+}
+
+.cta-subtitle {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #9e4757;
+  margin-bottom: 12px;
+}
+
+.shop-cta-text h2 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  color: #2c2224;
+  margin: 0 0 12px;
+}
+
+.shop-cta-text p {
+  font-size: 15px;
+  color: #6b5e60;
+  margin: 0 0 24px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #9e4757;
+  color: #ffffff;
+  padding: 12px 26px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #823644;
+}
+
+.shop-cta-image img{
+  width: 240px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 20px rgba(158,71,87,0.15));
+}
+
+.shop-cta-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .shop-cta-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .shop-cta-text {
+    text-align: center;
+  }
+
+  .shop-cta-image {
+    flex: none;
+    width: 240px;
+  }
+}
+.journal-editorial-hero {
+  position: relative;
+  min-height: 560px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.journal-hero-center {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 540px;
+  padding: 20px;
+}
+
+.journal-tag {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  color: #9e4757;
+  margin-bottom: 14px;
+}
+
+.journal-hero-center h1 {
+  font-family: Georgia, serif;
+  font-size: 46px;
+  font-style: italic;
+  color: #2c2224;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.journal-hero-center p {
+  font-size: 15px;
+  color: #6b5e60;
+  margin: 0;
+}
+
+.journal-corner-img {
+  position: absolute;
+  z-index: 1;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+}
+
+/* Top-Right Stand */
+.top-right-stand {
+  top: 30px;
+  right: 40px;
+  width: 210px;
+  padding: 10px;
+}
+
+.top-right-stand img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Bottom-Left Hand */
+.bottom-left-hand {
+  bottom: 30px;
+  left: 40px;
+  width: 220px;
+}
+
+.bottom-left-hand img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive stacking on smaller screens */
+@media (max-width: 900px) {
+  .journal-editorial-hero {
+    flex-direction: column;
+    gap: 28px;
+    padding: 40px 20px;
+  }
+
+  .journal-corner-img {
+    position: static;
+    width: 220px;
+  }
+}
+.cart-banner {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-banner-text {
+  text-align: center;
+}
+
+.cart-banner-cake {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  height: 190px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(158, 71, 87, 0.12);
+}
+
+.cart-banner-cake img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .cart-banner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cart-banner-cake {
+    position: static;
+    transform: none;
+    width: 140px;
+    height: 160px;
+  }
+}
+.cart-banner-roses {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  max-width: 160px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cart-banner-roses img {
+  width: 160px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  mix-blend-mode: multiply;
+}
+.cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cat-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  flex-shrink: 0;
 }
